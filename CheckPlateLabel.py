@@ -1,12 +1,12 @@
 
 # IMG_FILE_PATH = "C:\Users\pc\Desktop\Dataset_for_LPR-master\Black-box_01"
-LABEL_FILE_PATH = "C:/Users/pc/Desktop/Dataset_for_LPR-master/Black-box_01/"
-PLATE_FILE_PATH = "C:/Users/pc/Desktop/Dataset_for_LPR-master/LPR-master-Label/Black-box_01/"
+LABEL_FILE_PATH = "C:/Users/pc/Desktop/Dataset_for_LPR-master/Black-box_06/"
+PLATE_FILE_PATH = "C:/Users/pc/Desktop/Dataset_for_LPR-master/LPR-master-Label/Black-box_06/"
 
-currIdx = 3
+currIdx = 330
 currFile = 'Image000' + str('%03d' % currIdx)
 
-for i in range(53):
+for i in range(67):
 
     label_count = 0
     try:
@@ -18,7 +18,8 @@ for i in range(53):
         f.close()
     except:
         # print("no label file name such", currFile)
-        currIdx += 1
+        print(end="")
+        # currIdx += 1
 
     plate_count = 0
     try:
@@ -36,3 +37,5 @@ for i in range(53):
         print(currFile, '\n')
     currIdx += 1
     currFile = 'Image000' + str('%03d' % currIdx)
+
+print(currFile, 'done')
